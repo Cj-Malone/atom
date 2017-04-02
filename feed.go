@@ -21,7 +21,7 @@ type Text struct {
 
 	Type string `xml:"type,attr,omitempty"`
 	Src  string `xml:"src,attr,omitempty"`
-	Body string `xml:",innerxml"`
+	Body string `xml:",chardata"`
 }
 
 // Extension represents a custom atom element.
