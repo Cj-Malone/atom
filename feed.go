@@ -44,7 +44,7 @@ type Person struct {
 	URI   string `xml:"uri,omitempty"`
 	Email string `xml:"email,omitempty"`
 
-	Extension []Extension `xml:",any,omitempty"`
+	Extension []interface{} `xml:",any,omitempty"`
 }
 
 // TimeStr is a date/time attribute that is in the correct
@@ -132,7 +132,7 @@ type Entry struct {
 	Updated     TimeStr    `xml:"updated"`
 
 	// Custom elements
-	Extension []Extension `xml:",any,omitempty"`
+	Extension []interface{} `xml:",any,omitempty"`
 }
 
 // Feed is the top level ATOM syndication element. Validation:
@@ -165,5 +165,5 @@ type Feed struct {
 	Entry []Entry `xml:"entry"`
 
 	// Custom elements
-	Extension []Extension `xml:",any,omitempty"`
+	Extension []interface{} `xml:",any,omitempty"`
 }
